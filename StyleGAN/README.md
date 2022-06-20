@@ -29,6 +29,7 @@
 - 그 외에는 기존 모델의 network를 토대로 한다.
 ### AdaIN?
 $AdaIN(x_{i},y)=y_{s,i}\frac{x_{i}-\mu(x_i)}{\sigma(x_{i})}+y_{b,i}$
+
 위 식의 분수 부분이 일반적인 정규화 부분이고 앞 뒤로 scaling과 bias를 적용하여 feature space의 statistics를 변경할 수 있게 한다.
 이러한 Adaptive instance Normalization 방식을 generator에 추가하였다.
 
@@ -44,6 +45,7 @@ generated image를 잘 뽑아내기 위해 truncation trick을 사용하였는�
 
 $\bar{w}=E_{z~P(z)}[f(z)]$
 $w'=\bar{w}+\psi(w-\bar{w})$
+
 매핑된 w 벡터를 그대로 사용하는 것이 아니라 $\overline{w}$만큼 떨어진 w'를 사용하는 것
 ## 3. Properties of the style-based generator
 ### Style mixing
