@@ -4,7 +4,7 @@
 
 ※논문에서 자주 나오는 traditional model은 본 논문의 토대가 된 PGGAN을 의미한다. 따라서 앞으로 기존 모델로 표기할 예정
 
-※entangle = 이미지의 style이 얽혀있어 style 개별의 controle등이 어렵기 때문에 저자는 disentanglement를 강조한다
+※entangle = 이미지의 style이 얽혀있어 style 개별의 control등이 어렵기 때문에 저자는 disentanglement를 강조한다
 
 ## Abstract & Introduction
 - 기존의 PGGAN (style transfer literature)에서 몇가지를 개선하였다
