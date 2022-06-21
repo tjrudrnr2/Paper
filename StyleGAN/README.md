@@ -110,3 +110,14 @@ VGG16으로 perceptual length를 계산
 5. i 개의 attributes에 대해 $exp(\Sigma_{i}H(Y_{i}|X_{i}))$
  
     => 본래 latent space보다 몇 개의 label이 모자란 지
+![image](https://user-images.githubusercontent.com/70709889/174841349-9570cef0-a127-40af-893c-b288f6a0f8a3.png)
+
+![image](https://user-images.githubusercontent.com/70709889/174841439-82e249b2-e4cc-46b3-b4a7-b345085ad61e.png)
+## 5. Conclusion
+- 기존의 PGGAN보다 성능이 좋다
+- high-level attribute의 분리 (개별 style의 control)
+- stochastic effect
+- latent space의 선형화
+    => GAN의 black box에 대한 의미있는 연구
+    
+- perceptual path length, linear separabiliry metric 제시
