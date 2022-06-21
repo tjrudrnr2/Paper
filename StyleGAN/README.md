@@ -3,6 +3,7 @@
 #### paper : https://arxiv.org/abs/1812.04948
 
 ※논문에서 자주 나오는 traditional model은 본 논문의 토대가 된 PGGAN을 의미한다. 따라서 기존 모델로 표현할 예정
+
 ※entangle = 이미지의 style이 얽혀있어 style controle등이 어렵기 때문에 저자는 disentanglement를 강조한다
 
 ## Abstract & Introduction
