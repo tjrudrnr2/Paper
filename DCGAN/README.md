@@ -54,6 +54,7 @@ Generative model을 두가지 카테고리가 있다.
 Large-scale Scene Understanding (LSUN), Imagenet-1k, Faces dataset으로 학습하였다.
 ### 4-1. LSUN
 생성된 이미지 퀄리티가 증가함에 따라 over-fitting / memorization의 우려가 발생하였다. 즉, training sample을 치팅했는지 아닌지 증명하기 위해 one epoch 결과를 제시하였다.
+
 ![image](https://user-images.githubusercontent.com/70709889/175699225-1dc584b9-67b5-43e0-b0b1-dd28b7b132d4.png)
 
 online learning을 모방하여 1 epoch만 학습했기 때문에 over-fitting 혹은 memorization의 결과가 아님을 보여준다.
