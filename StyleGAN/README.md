@@ -25,7 +25,7 @@
 - 각 conv layer에서 이미지의 'style'을 조정 가능
 ## 2. Style-based generator
 ![image](https://user-images.githubusercontent.com/70709889/174525865-d10bc42d-a6ae-4ff6-af8d-910f4b3e19b2.png)
-- 기존에는 latent coda z가 input layer에 그대로 삽입
+- 기존에는 latent cod z가 input layer에 그대로 삽입
 - latent space Z를 8-layer MLP로 구성된 non-linear mapping network를 통해 W로 매핑 (disentangled)
 - w가 affine transform을 거쳐 style로 변환
 - style이 AdaIN을 통해 generator에서 style을 control하는 역할을 한다
@@ -82,7 +82,7 @@ $w'=\bar{w}+\psi(w-\bar{w})$
 - 기존에 Z를 input으로 넣을 때는 subspace가 non-linear하다 => entangled
   ∵ Z는 training data의 분포를 따른다
 - W로 매핑한 경우restrict가 없다 => more linear
-- disentangled 보다 entangled representation에서 이미지를 생성하기 쉬울 것으로 예상
+- entangled 보다 disentangled representation에서 이미지를 생성하기 쉬울 것으로 예상
 ==> 기존 metric은 input으로 들어가는 latent code가 필요하기 때문에 새로운 방법 제시
 ### 1. Perceptual path length
 - 두 latent-space를 interpolation 할 때 이미지가 비선형적으로 변한다 ex) 양 사이드에 없는 faeture가 middle에 등장
