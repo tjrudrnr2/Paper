@@ -104,7 +104,7 @@ VGG16으로 perceptual length를 계산
 1. 이미지 생성
 2. classifier를 통해 분류. 저자들은 discriminator와 같은 구조 사용
 3. confidence로 정렬한 후 상위 절반만 취급
-4. conditional entropy ($H(Y|X)$)를 구한다.
+4. conditional entropy $H(Y|X)$를 구한다.
     X = linear SVM을 통해 latent space를 label 별로 분류한 classes
     Y = classifier를 통해 분류된 classes
 5. i 개의 attributes에 대해 $exp(\Sigma_{i}H(Y_{i}|X_{i}))$
