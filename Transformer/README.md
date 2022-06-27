@@ -3,3 +3,4 @@
 
 ## References
 - [What is Attention mechanism?](https://wikidocs.net/22893)
+- [Beam Search](https://blog.naver.com/PostView.nhn?blogId=sooftware&logNo=221809101199&from=search&redirect=Log&widgetTypeCall=true&directAccess=false)
