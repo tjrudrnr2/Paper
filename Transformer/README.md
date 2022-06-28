@@ -74,9 +74,14 @@ decoder의 position 정보가 leftward로 흐르면 안되기 때문에 이를 �
 
 위의 그림에서 알 수 있듯이 Self-Attention이 recurrent와 convolution과 비교했을 때 complexity와 sequential operation이 뛰어나다. 표의 오른쪽 column을 보면 maximum path도 짧은 것을 확인할 수 있는데 이는 forward와 backward 간에 거리가 가깝다는 것을 의미하고 path가 짧다면 long dependency를 학습하기 용이하다. (?)
 ## 5. Training
-생략
+- 데이터 셋, Hardward, Adam 얘기는 생략하겠음
+- Regularization
+  - Residual Dropout
+  - Label Smoothing
 ## 6. Results
-생략
+![image](https://user-images.githubusercontent.com/70709889/176095028-27f21d89-328e-4df8-a146-771999b66e68.png)
+
+다양한 task에서 SOTA를 달성하였고 Training Cost 또한 대폭 감소하였다.
 ## 7. Conclusion
 attention만을 고려한 최초의 모델인 transformer를 제시하였고 encoder-decoder 구조를 유지하면서 multi-head attention, self-attention을 도입하였다.
 English-German, English-French등 다양한 task에서 높은 성능을 보였고   image, audio, video등의 task에도 적용할 수 있을 것으로 예상한다.
@@ -88,7 +93,13 @@ English-German, English-French등 다양한 task에서 높은 성능을 보였�
 ## References
 - [What is Attention mechanism?](https://wikidocs.net/22893)
   - 각 단어가 어떤 단어에 비중을 두는지 계산
-- [Beam Search](https://blog.naver.com/PostView.nhn?blogId=sooftware&logNo=221809101199&from=search&redirect=Log&widgetTypeCall=true&directAccess=false)
-  - https://velog.io/@nawnoes/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC-Beam-Search
+- [Beam Search](https://velog.io/@nawnoes/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC-Beam-Search)
   - 모델이 출력한 확률 분포 중에서 확률이 가장 높은 sequence를 찾기 위한 방법이다. 다양한 방법이 있지만 그 중 Beam Search는 다음 step 중에서 하이퍼파라미터 k개로 탐색 범위를 유지하는 방법이다. 빔이 클수록 target을 맞출 확률이 높아지지만 디코딩 속도가 느려진다고 한다.
   - 본 논문에서는 beam size를 4로 하였다.
+- [Label Smmoothing을 하는 이유?](https://3months.tistory.com/465)
+  - class score를 0 또는 1처럼 예측하는 것이 아니라 0.2, 0.9처럼 smooth하게 만들어 예측에 대한 확신을 줄인다. 
+  - Why? 
+    - mislabeling에 대한 고려
+    - regularization, calibration에 도움
+- [Calibration 이란?](https://3months.tistory.com/490)
+  - confidence를 예측에 반영하는 것. ex) class "dog"이 0.8라면 80% 확률로 dog라고 확신한다!
