@@ -31,7 +31,8 @@ decoder로부터 query를 받고 encoder의 output으로부터 key와 value를 �
 2. self-attention in encoder
 말 그대로 자기 자신을 attention한다. key, value, query가 encoder의 이전 layer로부터 오며 모두 동일하다.
 3. self-attention in decoder (Masked)
-decoder의 position 정보가 leftward로 흐르면 안되기 때문에 이를 방지하기 위해 $-\infty$ 로 masking 해준다. 그러면 softmax의 input으로 $-\infty$가 들어가기 때문에 미래 시점의 단어들이 0에 수렴하게 된다.
+decoder의 position 정보가 leftward로 흐르면 안되기 때문에 이를 방지하기 위해 $-\infty$ 로 masking 해준다. 
+그러면 softmax의 input으로 $-\infty$가 들어가기 때문에 미래 시점의 단어들이 0에 수렴하게 된다.
 
   - Scaled Dot-Product Attention
 ![image](https://user-images.githubusercontent.com/70709889/176039169-9bdfa9c2-b4d7-45ef-a7f0-ea009fd2f548.png)
