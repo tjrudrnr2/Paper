@@ -1,6 +1,12 @@
 # Attention Is All You Need
 ### paper : https://arxiv.org/abs/1706.03762
 
+## Summary
+기존 언어모델들은 recurrent, convolution과 attention mechanism을 혼합해 사용했지만 recurrent와 
+convolution을 사용하는 것은 다양한 단점이 존재했다.
+
+따라서, encoder-decoder 구조는 유지하면서 attention에만 기반한 모델을 제시하였다.
+
 ## 1. Abstract & Introduction
 기존 SOTA 모델들은 recurrence와 convolution으로 인해 parallelizable이 어렵고, 긴 sequence에 취약하며, memory 및 학습 시간 비용이 크다는 단점이 있었다.
 
@@ -91,6 +97,14 @@ English-German, English-French등 다양한 task에서 높은 성능을 보였�
 
 위의 그림은 attention을 시각화한 모습이다.
 
+===================
+## Discussion
+![image](https://user-images.githubusercontent.com/70709889/176348473-e4c7091e-741e-4915-87c3-460ac0543be8.png)
+
+decoder의 outputs가 들어오는 부분에 shifted right 하는 이유?
+- 문장 앞에 <SOS>를 붙이기 위해서
+- https://datascience.stackexchange.com/questions/88981/what-are-the-inputs-to-the-first-decoder-layer-in-a-transformer-model-during-the
+
 ## References
 - [What is Attention mechanism?](https://wikidocs.net/22893)
   - 각 단어가 어떤 단어에 비중을 두는지 계산
@@ -104,3 +118,11 @@ English-German, English-French등 다양한 task에서 높은 성능을 보였�
     - regularization, calibration에 도움
 - [Calibration 이란?](https://3months.tistory.com/490)
   - confidence를 예측에 반영하는 것. ex) class "dog"이 0.8라면 80% 확률로 dog라고 확신한다!
+- [BLEU](https://jrc-park.tistory.com/273)
+  - 공통으로 들어간 단어 개수 / 생성한 문장의 단어 개수
+  - from nltk.translate.bleu_score import sentence_bleu 라이브러리를 사용하여 쉽게 구할 수 있다
+  ```
+  reference = [["this", "is", "the", "sample"]]
+  candidate = ['this', "is", "the", "sample"]
+  score1 = sentence_bleu(reference, candidate, weights=(1, 0, 0, 0)) # 1.0
+  ```
