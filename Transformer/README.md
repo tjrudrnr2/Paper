@@ -101,9 +101,11 @@ English-German, English-French등 다양한 task에서 높은 성능을 보였�
 ## Discussion
 ![image](https://user-images.githubusercontent.com/70709889/176348473-e4c7091e-741e-4915-87c3-460ac0543be8.png)
 
-decoder의 outputs가 들어오는 부분에 shifted right 하는 이유?
+#### decoder의 outputs가 들어오는 부분에 shifted right 하는 이유?
 - 문장 앞에 <SOS>를 붙이기 위해서
 - https://datascience.stackexchange.com/questions/88981/what-are-the-inputs-to-the-first-decoder-layer-in-a-transformer-model-during-the
+
+#### 지금까지는 목차별로 요약하는 방식으로 review 하였는데 전체 내용을 내 방식대로 정리하는 습관을 들어야겠다.
 
 ## References
 - [What is Attention mechanism?](https://wikidocs.net/22893)
