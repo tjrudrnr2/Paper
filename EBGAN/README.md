@@ -60,6 +60,11 @@ EBGAN 안에 LN 구조를 적용했을 때 기존 LN보다 더 낮은 error rate
 
 ![image](https://user-images.githubusercontent.com/70709889/180705720-61afcd9f-adf2-40f6-aea5-40fbf9b8e490.png)
 
+![image](https://user-images.githubusercontent.com/70709889/180706886-116a9472-2186-40c7-865a-3a76e2320e25.png)
+
+- margin이 순서대로 1,2,4,6,8,12,16,32 일 때의 결과
+- margin이 너무 높을 경우 이미지를 제대로 생성하지 못하는 것을 확인할 수 있다
+
 # Conclusion
 
 GAN과 Auto-Encoder를 결합하여 energy-based framework를 구상했으며, 학습의 안정성 과 고해상도 면에서 좋은 성능을 보인다.
