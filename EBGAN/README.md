@@ -32,7 +32,7 @@ Mode Collapse를 방지하기 위해 제안한 regularizer이다. 따라서, Gen
 
 $f_{PT}(S)=\frac{1}{N(N-1)}\sum_i \sum_{j\neq i}(\frac{S_t^T S_j}{||S_i||||S_j||})^2$
 
-S는 Encoder의 output으로, 압축된 feature를 담고 있다. N개의 batch마다 각 feature 간에 코사인 유사도를 구하는건데 N(N-1)로 왜 나눠주는거지? 아마 비슷한 feature를 참고하지 못하게 코사인 유사도를 0 (직교)에 가깝게 만들어 주기 위해서…?
+S는 Encoder의 output으로, 압축된 feature를 담고 있다. N개의 batch마다 각 feature 간에 코사인 유사도를 구하는건데 N(N-1)로 왜 나눠주는거지? Nx(N-1)개를 더했음 => 평균..?
 
 # Results
 
