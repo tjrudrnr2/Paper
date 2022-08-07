@@ -84,7 +84,8 @@ GAN과 Auto-Encoder를 결합하여 energy-based framework를 구상했으며, �
     모든 구간에서 증가 함수이므로 최소값은 0이다.
     
 - Lemma 2.
-    - p, q가 probability density일 때, $\int_x l_{p(x)<q(x)}dx=0$이라면 $\int_x l_{p(x) \neq(x)}dx=0$ 이다.
+
+  - p, q가 probability density일 때, $\int_x l_{p(x) < q(x)}dx=0$ 이라면 $\int_x l_{p(x) \neq(x)}dx=0$이다.
     
 
 $V(G,D)=\int_{x,z}L_D(x,z)p_{data}(x)p_z(z)dxdz \qquad (3)$
@@ -103,9 +104,7 @@ V : Discriminator, U : Generator
     
 - Theorem 2
     - 내쉬평형 상태에서 (a) $p_{G^*}=p_{data}$, (b) $D^*(x)=\gamma$를 만족하는 $\gamma \in [0,m]$ 이 존재한다
-- 수식
-    
-    [Energy-based Generative Adversial Networks.pdf](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3701fcdd-0265-48d9-8f66-1d815563a0df/Energy-based_Generative_Adversial_Networks.pdf)
+- 수식은 pdf 파일로 업로드하였음.
     
 
 # To discuss
@@ -119,10 +118,7 @@ V : Discriminator, U : Generator
     - [https://hyeonnii.tistory.com/277](https://hyeonnii.tistory.com/277)
     - input 간의 상대적인 거리를 예측하기 위한 loss. metric learning이라고도 불림.
 - Ladder Network (LN)
-    - [https://koreapy.tistory.com/1222](https://koreapy.tistory.com/1222)
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c4713f52-50c6-4ca8-9ab1-3d239c544391/Untitled.png)
-    
+    - [https://koreapy.tistory.com/1222](https://koreapy.tistory.com/1222)    
     - semi-superviesd learning에서 hierarchical latent variable을 반영하기 위한 모델. 인코더와 디코더를 평행하게 구성.
 - Data manifold
     - [https://velog.io/@xuio/TIL-Data-Manifold-학습이란](https://velog.io/@xuio/TIL-Data-Manifold-%ED%95%99%EC%8A%B5%EC%9D%B4%EB%9E%80)
